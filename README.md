@@ -53,18 +53,20 @@ Client setup screens and configuration locations differ. Use the client's MCP se
 
 ## First publication
 
-The package is scoped to the npm account **osama101979**. From the repository root, the owner publishes the first version with their own npm login:
+The package is scoped to the npm account **osama101979**. From the repository root, publish the first version using that account:
 
 ~~~sh
 npm login
 npm publish --access public
 ~~~
 
-Do not share npm passwords, one-time codes, or access tokens. The public package name is **@osama101979/shark-tank-mcp-server**.
+The public package name is **@osama101979/shark-tank-mcp-server**. Do not share npm passwords, one-time codes, or access tokens.
 
 ## Publish to the official MCP Registry
 
-The registry requires the installable package to exist on npm before publishing this local stdio server. Install the official **mcp-publisher** CLI from the [MCP Registry releases](https://github.com/modelcontextprotocol/registry/releases), then run from the repository root:
+Publish the npm package first. Then, from the repository's **Actions** tab, run the **Publish to MCP Registry** workflow. It uses GitHub OIDC authentication, validates server.json, and submits the server to the official Registry.
+
+To publish manually instead, install the official **mcp-publisher** CLI from the [MCP Registry releases](https://github.com/modelcontextprotocol/registry/releases), then run from the repository root:
 
 ~~~sh
 mcp-publisher login github
@@ -72,7 +74,7 @@ mcp-publisher validate
 mcp-publisher publish
 ~~~
 
-The publisher uses GitHub-based authentication for the **io.github.osama101979-afk/** namespace. The npm package and Registry listing are separate publications.
+The Registry entry uses the **io.github.osama101979-afk/** namespace. npm and the MCP Registry are separate publications.
 
 ## Rights and attribution
 
