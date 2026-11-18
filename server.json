@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.osama101979-afk/shark-tank-business-evaluator",
+  "title": "Shark Tank Business Evaluator",
+  "description": "Bilingual Shark Tank-inspired business evaluation prompts, references, and pitch review briefs.",
+  "repository": {
+    "url": "https://github.com/osama101979-afk/shark-tank-mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@osama101979-afk/shark-tank-mcp-server",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}
