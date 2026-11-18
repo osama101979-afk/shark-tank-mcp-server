@@ -1,6 +1,6 @@
 # Shark Tank Business Evaluator — MCP Server
 
-A local, bilingual MCP server that makes the public Shark Tank business-evaluation skill available to compatible AI clients through a prompt, a prompt-building tool, and Markdown resources.
+A local, bilingual MCP server that makes the public Shark Tank-inspired business-evaluation skill available to compatible AI clients through a prompt, a prompt-building tool, and Markdown resources.
 
 ## What it does
 
@@ -23,10 +23,10 @@ npm install
 npm start
 ~~~
 
-The package exposes a command named shark-tank-mcp-server. Once the package is published, a standard stdio MCP client can start it with:
+The package exposes a command named **shark-tank-mcp-server**. After the npm package is published, a standard stdio MCP client can start it with:
 
 ~~~sh
-npx -y @osama101979-afk/shark-tank-mcp-server
+npx -y @osama101979/shark-tank-mcp-server
 ~~~
 
 A generic client configuration looks like:
@@ -36,7 +36,7 @@ A generic client configuration looks like:
   "mcpServers": {
     "shark-tank-business-evaluator": {
       "command": "npx",
-      "args": ["-y", "@osama101979-afk/shark-tank-mcp-server"]
+      "args": ["-y", "@osama101979/shark-tank-mcp-server"]
     }
   }
 }
@@ -51,9 +51,20 @@ Client setup screens and configuration locations differ. Use the client's MCP se
 - shark-tank://skill/market-research
 - shark-tank://skill/investor-lenses
 
+## First publication
+
+The package is scoped to the npm account **osama101979**. From the repository root, the owner publishes the first version with their own npm login:
+
+~~~sh
+npm login
+npm publish --access public
+~~~
+
+Do not share npm passwords, one-time codes, or access tokens. The public package name is **@osama101979/shark-tank-mcp-server**.
+
 ## Publish to the official MCP Registry
 
-The package metadata includes a matching mcpName and registry server.json. The official registry flow requires an installable package to be published first. After publishing this scoped npm package:
+The registry requires the installable package to exist on npm before publishing this local stdio server. Install the official **mcp-publisher** CLI from the [MCP Registry releases](https://github.com/modelcontextprotocol/registry/releases), then run from the repository root:
 
 ~~~sh
 mcp-publisher login github
@@ -61,7 +72,7 @@ mcp-publisher validate
 mcp-publisher publish
 ~~~
 
-The registry publisher uses GitHub-based namespace authentication for io.github.osama101979-afk/. Publishing the npm package and registering the server require the owner's own npm/GitHub authentication.
+The publisher uses GitHub-based authentication for the **io.github.osama101979-afk/** namespace. The npm package and Registry listing are separate publications.
 
 ## Rights and attribution
 
