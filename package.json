@@ -1,0 +1,20 @@
+{
+  "name": "@osama101979-afk/shark-tank-mcp-server",
+  "version": "0.1.0",
+  "description": "Bilingual Shark Tank-inspired business evaluation prompts and frameworks.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": { "node": ">=20" },
+  "mcpName": "io.github.osama101979-afk/shark-tank-business-evaluator",
+  "bin": { "shark-tank-mcp-server": "src/index.js" },
+  "files": ["src", "server.json", "README.md"],
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "^4.0.0"
+  },
+  "publishConfig": { "access": "public" }
+}
