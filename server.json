@@ -7,13 +7,13 @@
     "url": "https://github.com/osama101979-afk/shark-tank-mcp-server",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
-      "identifier": "@osama101979-afk/shark-tank-mcp-server",
-      "version": "0.1.0",
+      "identifier": "@osama101979/shark-tank-mcp-server",
+      "version": "0.1.1",
       "transport": { "type": "stdio" }
     }
   ]
